@@ -2,6 +2,11 @@
 
 namespace app\models\customer;
 
+/**
+ * Class Customer
+ *
+ * @package app\models\customer
+ */
 class Customer
 {
     /**

@@ -4,6 +4,14 @@ namespace app\models\customer;
 
 use yii\db\ActiveRecord;
 
+/**
+ * Class PhoneRecord
+ *
+ * @property integer $customer_id
+ * @property integer $number
+ *
+ * @package app\models\customer
+ */
 class PhoneRecord extends ActiveRecord
 {
     public static function tableName()

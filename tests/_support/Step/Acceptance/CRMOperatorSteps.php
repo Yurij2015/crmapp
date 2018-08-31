@@ -31,7 +31,7 @@ class CRMOperatorSteps extends \AcceptanceTester
     public function submitCustomerDataForm()
     {
         $I = $this;
-        $I->click('submit');
+        $I->click('Submit');
     }
 
     public function seeIAmInListCustomersUi()
@@ -43,6 +43,6 @@ class CRMOperatorSteps extends \AcceptanceTester
     public function amInListCustomersUi()
     {
         $I = $this;
-        $I->amOnPage('/customers/');
+        $I->amOnPage('/customers');
     }
 }
