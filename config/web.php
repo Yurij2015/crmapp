@@ -3,7 +3,6 @@ $db = require __DIR__. '/db.php';
 
 return [
   'id' => 'crmapp',
-  //'basePath' => realpath(__DIR__.'/../'),
   'basePath' => dirname(__DIR__),
   'components' => [
       'request' => [
@@ -16,8 +15,15 @@ return [
           'showScriptName' => false,
       ],
   ],
+  'modules' => [
+      'gii' => [
+          'class' => 'yii\gii\Module',
+          'allowedIPs' => ['*'],
+      ]
+  ],
   'aliases' => [
       '@bower' => '@vendor/bower-asset',
       '@npm'   => '@vendor/npm-asset',
   ],
+  'extensions' => require(__DIR__.'/../vendor/yiisoft/extensions.php'),
 ];

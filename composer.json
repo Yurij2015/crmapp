@@ -3,5 +3,8 @@
         "codeception/codeception": "*",
         "fzaninotto/faker": "^1.8",
         "yiisoft/yii2": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-gii": "^2.0"
     }
 }

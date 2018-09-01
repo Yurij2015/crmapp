@@ -1,5 +1,9 @@
 <?php
 defined('YII_DEBUG') or define('YII_DEBUG', true);
+
+// Autoload
+require(__DIR__. '/../vendor/autoload.php');
+
 // Enable framework
 require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
