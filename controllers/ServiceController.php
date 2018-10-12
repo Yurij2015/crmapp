@@ -132,7 +132,7 @@ class ServiceController extends Controller
         $data = array_map(function($model) {
            return $model->attributes;
         }, $models);
-        
+
         $response = Yii::$app->response;
         $response->format = YamlResponseFormatter::FORMAT;
         $response->data = $data;
