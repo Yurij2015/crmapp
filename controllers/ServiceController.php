@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\utilities\YamlResponseFormatter;
 use Yii;
 use app\models\service\ServiceRecord;
 use app\models\service\ServiceSearchModel;
@@ -123,5 +124,19 @@ class ServiceController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionYaml()
+    {
+        $models = ServiceRecord::find()->all();
+        $data = array_map(function($model) {
+           return $model->attributes;
+        }, $models);
+        
+        $response = Yii::$app->response;
+        $response->format = YamlResponseFormatter::FORMAT;
+        $response->data = $data;
+
+        return $response;
     }
 }

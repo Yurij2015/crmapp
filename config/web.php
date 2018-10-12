@@ -20,7 +20,14 @@ return [
                   'class' => 'app\utilities\MarkdownRenderer',
               ]
           ]
-      ]
+      ],
+      'response' => [
+          'formatters' => [
+              'yaml' => [
+                  'class' => 'app\utilities\YamlResponseFormatter',
+              ],
+          ],
+      ],
   ],
   'modules' => [
       'gii' => [
