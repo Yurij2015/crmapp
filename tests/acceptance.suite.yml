@@ -8,7 +8,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-        - \Helper\Acceptance
+        - \AcceptanceHelper
     config:
         PhpBrowser:
           url: http://yii-develop.test

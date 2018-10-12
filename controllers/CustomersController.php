@@ -10,6 +10,11 @@ use Yii;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
 
+/**
+ * Class CustomersController
+ *
+ * @package app\controllers\
+ */
 class CustomersController extends Controller
 {
     public function actionIndex()
