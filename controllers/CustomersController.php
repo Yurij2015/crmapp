@@ -17,6 +17,28 @@ use yii\web\Controller;
  */
 class CustomersController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::class,
+                //'only' => ['login', 'logout'],
+                'rules' => [
+                    [
+                        'actions' => ['add'],
+                        'roles' => ['manager'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['index, query'],
+                        'roles' => ['user'],
+                        'allow' => true,
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionIndex()
     {
         $records = $this->findRecordsByQuery();

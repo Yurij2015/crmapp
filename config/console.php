@@ -6,5 +6,9 @@ return [
     'basePath' => dirname(__DIR__),
     'components' => [
         'db' => $db,
+        'authManager' => [
+            'class' => \yii\rbac\DbManager::class,
+            'defaultRoles' => ['guest'],
+        ],
     ],
 ];

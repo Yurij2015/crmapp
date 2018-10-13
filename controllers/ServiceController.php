@@ -27,6 +27,16 @@ class ServiceController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::class,
+                //'only' => ['login', 'logout'],
+                'rules' => [
+                    [
+                        'roles' => ['manager'],
+                        'allow' => true,
+                    ],
+                ],
+            ],
         ];
     }
 

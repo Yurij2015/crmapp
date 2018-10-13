@@ -10,6 +10,10 @@ return [
           'enableCookieValidation' => false,
       ],
       'db' => $db,
+      'authManager' => [
+          'class' => \yii\rbac\DbManager::class,
+          'defaultRoles' => ['guest'],
+      ],
       'urlManager' => [
           'enablePrettyUrl' => true,
           'showScriptName' => false,
