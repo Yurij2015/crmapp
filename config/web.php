@@ -20,10 +20,10 @@ return [
                   'class' => 'app\utilities\MarkdownRenderer',
               ]
           ],
-          'theme' => [
-              'class' => yii\base\Theme::class,
-              'basePath' => '@app/themes/snowy',
-          ],
+          //'theme' => [
+          //    'class' => yii\base\Theme::class,
+          //    'basePath' => '@app/themes/snowy',
+          //],
       ],
       'response' => [
           'formatters' => [
@@ -31,6 +31,9 @@ return [
                   'class' => 'app\utilities\YamlResponseFormatter',
               ],
           ],
+      ],
+      'user' => [
+          'identityClass' => 'app\models\user\UserRecord',
       ],
   ],
   'modules' => [

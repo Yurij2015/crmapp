@@ -10,3 +10,10 @@ modules:
     enabled:
         # add a framework module here
         - \Helper\Functional
+    config:
+      Db:
+        dsn: 'mysql:host=localhost;dbname=yii-develop'
+        user: 'homestead'
+        password: 'secret'
+        dump: 'tests/_data/dump.sql'
+
